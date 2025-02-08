@@ -1217,7 +1217,8 @@ def save_to_gguf(
 
             command = f"{quantize_location} {full_precision_location} "\
                 f"{final_location} {quant_method} {n_cpus}"
-            
+            print(f"command = {command}")
+
             try_execute([command,], force_complete = True)
 
             # Check if quantization succeeded!
